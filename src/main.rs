@@ -9,9 +9,9 @@ async fn main() -> std::io::Result<()> {
             )
             .route("/profile", actix_web::web::post().to(index))
     })
-    .bind(("127.0.0.1", 8001))?
-    .run()
-    .await
+        .bind(("127.0.0.1", 8001))?
+        .run()
+        .await
 }
 
 async fn index() -> &'static str {
